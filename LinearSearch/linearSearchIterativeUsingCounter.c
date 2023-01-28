@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdbool.h>
 int main()
 {
 	short int arr[] = { 1, 4, 51, 2, 51, 14, 9};
@@ -7,9 +6,7 @@ int main()
 	int size = sizeof(arr);
 	int length = sizeof(arr) / sizeof(short int);
 	int i;
-	bool found = false;
-	printf("Size Of Array in Bytes %d\n", size);
-	printf("Size Of Array %d\n", length);
+	int counter = 0;
 
 	printf("Enter Search Key: ");
 	scanf("%d", &searchKey);
@@ -18,11 +15,10 @@ int main()
 	{
 		if (arr[i] == searchKey)
 		{
-			printf("Found in location %d \n", i);
-			found = true;	
+			printf("Found in location: %d\n", i);
+			counter++;	
 		}
 	}
-
-	if (!found)
-		printf("not found \n ");
+	if (counter == 0)
+		printf("Not Found \n");
 }

@@ -8,7 +8,7 @@ int main()
 	int arr[] = {1,4,5,5,1,13,512,1,151};
 	// search key
 	int key = 0;
-	// i used counter cause bool got problems with some compilers
+	// i used counter cause bool have problem with clang compiler
 	// counter used to achive a condition if their is repetition of the key
 	int counter = 0;
 	// count the length of the array
@@ -52,7 +52,6 @@ int search(int arr[], int key, int length, int counter)
 	}	
 	// recursion of the function
 	search(arr, key, length-1,counter);	
-
 }
 
 
